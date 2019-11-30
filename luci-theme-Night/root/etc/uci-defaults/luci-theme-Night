@@ -1,0 +1,7 @@
+#!/bin/sh
+uci batch <<-EOF
+	set luci.themes.Night=/luci-static/Night
+	set luci.main.mediaurlbase=/luci-static/Night
+	commit luci
+EOF
+exit 0

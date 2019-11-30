@@ -1,0 +1,201 @@
+/*
+ * LuCI Bootstrap Theme
+ * Author: Mod By_Ameng
+ * Author URI: 
+------------------------------------------------------- */
+/* Reset */  /* 页面背景 最上面的字体大小 */
+body { background: #FFFFFF; color: #333; font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.8; margin: 0; padding-top: 48px; }  /* 状态和上面的距离 */
+a { color: #08c; text-decoration: none; outline: 0; }
+a:hover { opacity: 1; }
+
+/* Style */
+.container:first-child { height: 48px; }  /* 登陆主页上面蓝色横条宽度 */
+.container { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.pull-left, .left { float: left; }
+.pull-right, .right { float: right; }
+.inline { display: inline; }
+.hidden { display: none; }
+
+/* 隐藏登录用户栏 */
+#.container form[action$="/cgi-bin/luci"] .cbi-map fieldset fieldset div:first-child { display: none; }
+#.pull-left, .left { float: left; }#ff0000
+#.pull-right, .right { float: right; }
+#.inline { display: inline; }
+#.hidden { display: none; }
+
+/* Header */  /* 顶栏横条 */
+header { position: fixed; top: 0; left: 0; right: 0; background: #454C59; box-shadow: 0 1px 1px rgba(0,0,0,.1); z-index: 100; }
+.brand { float: left; color: #ffffff; font-size: 25px; font-weight: 1200; line-height: 48px; margin-right: 25px; position: absolute; left: 0; margin-left: 15px; }
+header:before{background:#000 linear-gradient(to left,#00FF00,#FF8C00,#FF7F00,#FFFF00,#00FF00,#00FF00,#FFFF00,#FF7F00,#FF8C00,#00FF00);content:"";height:2px;position:absolute;top:0;width:100%;min-width:5in}   /* 最上面彩虹 */
+.nav li { float: left; }
+.nav a { display: block; color: #ffffff; line-height: 48px; padding: 0 19px;}   /* 顶栏中字体颜色 */
+
+/* Dropdown */    /* 鼠标点击状态出现下面的字体 修改里面的背景和圆角还有颜色字体 */
+.dropdown { position: relative; }
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu { display: none; position: absolute; top: 48px; background: #ffffff; border-radius: 9px; box-shadow: 0 1px 3px rgba(0,0,0,.3); padding: 8px 0; z-index: 100; }
+.dropdown-menu:before { content: ''; position: absolute; top: -6px; left: 27px; border-bottom: 6px solid #ffffff; border-left: 7px solid transparent; border-right: 7px solid transparent; }
+.dropdown-menu a { color: #404040; line-height: 29px; min-width: 135px; margin: 1px 0; padding: 0 20px; } /* 选择菜单横条间长度 */
+.dropdown-menu a:hover { background: rgba(0,0,0,.1); color: #0099cc; }   /* 选择菜单横条颜色 */
+ 
+/* Label */   /* 右上角自动刷新 */
+.label { display: inline-block; background: #bbb; border-bottom: 0.4px solid rgba(0,0,0,.0); border-radius: 15px; color: #fff; font-size: 10px; line-height: 25px; text-transform: uppercase; margin-top: 12px; padding: 0 9px; cursor: pointer; }
+.label.success { background: #00CED1; }
+.label.notice { background: #F48FB1; }
+.label.important { background: #f00; }
+.label.warning { background: #fc0; }
+ 
+/* Main */
+h2{margin-bottom:15px;padding:.2rem;width:180px;border-right:6px solid #6A5ACD;border-left:6px solid #FF1493;border-radius:40px 0;color:#2F4F4F;text-align:center;text-shadow:5px 2px 6px #708090;font-size:1.2pc;line-height:24px}   /* 状态左右两边颜色和距离下面系统间距 */
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h2 a { color: #333; }
+h2 a:hover { opacity: 1; }
+h2+.cbi-map-descr { margin-top: -10px; }
+.alert-message { position: relative; padding: 20px; margin-bottom: 20px; background: #fe8; border: 1px solid rgba(0, 0, 0, .1); border-width: 1px 0; }
+.error, .errorbox { display: inline; }
+.error { color: #f00; }
+.errorbox { color: #3b3; }
+#maincontainer { box-shadow: 0 0 1px rgba(0,0,0,.3); border-radius: 4px; width: 500px; margin: 120px auto 0; padding: 30px; }
+#syslog { background: #fafafa; color: #666; width: 100%; }
+ 
+/* Change List */
+.uci-change-legend { padding-top: 15px; }
+.uci-change-legend-label { float: left; margin-right: 100px; }
+.uci-change-legend-label>ins, .uci-change-legend-label>del, .uci-change-legend-label>var { float: left; width: 10px; height: 10px; margin-top: 3px; margin-right: 6px; }
+.uci-change-list { font-family: monospace; }
+.uci-change-list ins, .uci-change-legend-label ins, .uci-change-list del, .uci-change-legend-label del, .uci-change-list var, .uci-change-legend-label var { display: block; text-decoration: none; padding: 2px; }
+.uci-change-list ins, .uci-change-legend-label ins { background: #cfc; border: 1px solid #4f4; }
+.uci-change-list del, .uci-change-legend-label del { background: #fcc; border: 1px solid #f00;  }
+.uci-change-list var, .uci-change-legend-label var { background: #f2f2f2; border: 1px solid #ccc;  }
+.uci-change-list var ins, .uci-change-list var del { border: 0; white-space: pre; padding: 0; }
+.uci-change-legend-label var ins, .uci-change-legend-label var del { border: 0; line-height: 6px; }
+ 
+/* Tabs */  /* 系统属性下面文字颜色 */
+.tabs, .cbi-tabmenu { border-bottom: 1px dashed #eee; margin-bottom: 20px; }
+.tabs li, .cbi-tabmenu li { display: inline-block; }
+.tabs a, .cbi-tabmenu a { display: block; color: #19a4e6; line-height: 34px; margin-bottom: -1px; margin-right: 20px; padding: 0 3px; }
+.active a, .cbi-tab a { border-bottom: 1px dashed #19a4e6; color: #19a4e6; }
+ 
+/* Fieldset */   /* 主页系统内存网络等字体颜色和错位问题#85d9ff */
+fieldset { border:0px; margin: 10px 0; padding: 0; }
+fieldset legend {
+	margin: 5px 0;
+	padding: 3px 20px;
+	border: 1.8px dashed #1e7ace;
+	border-radius: 20px;
+	background: #fff;
+	color: #1e7ace;
+	font-weight: 900;
+	transform:rotate(-5deg);
+     -ms-transform:rotate(-4.2deg); /* IE 9 */
+    -moz-transform:rotate(-4.2deg); /* Firefox */
+ -webkit-transform:rotate(-4.2deg); /* Safari and Chrome */
+      -o-transform:rotate(-4.2deg); /* Opera */
+}                                              /* 修改系统天气内存字体角度添加阴影颜色 */
+fieldset fieldset { margin: 0; }
+.cbi-value { margin-bottom: 10px; zoom: 1; overflow: hidden; }
+
+table .cbi-value-field { display: table-cell; }
+.cbi-value-title { text-align: right; vertical-align: top; width: 180px; padding-top: 6px; line-height: 15px; float: left; color: #404040; }  /* app选项间隔大小 */
+.cbi-value-field { color: #404040; margin-left: 200px; }
+.cbi-section-table-cell { white-space: nowrap; }
+ 
+/* Table */  /* 主机名 主机型号 里面的字体颜色 */
+table { width: 100%; margin: 0 0 10px !important; border-collapse: collapse; }
+table tr:first-child { border-top: 1px dashed #D3D3D3; }
+table tr+tr td { border-top: 1px solid #FFFFFF; }   /* 间隔横条颜色 */
+table tr { border-bottom: 1px solid #FFFFFF; }
+table th, table td { color: #404040; padding: 7px 5px !important; }   /* 改变状态列表字体颜色 */
+table th { text-align: left; }
+table td:first-child { color: #333; }
+#cbi-network tr, #cbi-wireless tr, tr tr:first-child { border-top: 0; }
+#cbi-network tr, #cbi-wireless tr, tr tr { border-bottom: 0; }
+#cpu_free, #memtotal, #memfree, #memcache, #membuff, #conns, #swaptotal, #swapfree { line-height: 18px; }
+#cpu_free>div, #memtotal>div, #memfree>div, #memcache>div, #membuff>div, #conns>div, #swaptotal>div, #swapfree>div { border: 1.4px dashed #aaa !important; border-radius: 3px; width: 220px !important; }
+#cpu_free>div>div, #memtotal>div>div, #memfree>div>div, #memcache>div>div, #membuff>div>div, #conns>div>div, #swaptotal>div>div, #swapfree>div>div { background: #85d9ff !important; height: 19px !important; border-radius: 2px; }
+
+/* Form */  /* 各个选项窗口圆角参数 */
+input, textarea, select { display: inline-block; border: 1px dashed #ddd; border-radius: 13px; box-sizing: border-box; color: #666; font: inherit; line-height: 16px; }
+input, select { width: 200px; }
+input, textarea { padding: 6px; }
+select { height: 30px; padding: 2px; }
+#cbi-firewall-redirect input { width: 90px; }
+#cbi-network-switch_vlan select, #cbi-firewall-zone select, #cbi-firewall-redirect select { width: auto; }
+input:active, input:focus { outline: 0; border-color: #08c; }
+input[type=file]:focus, input[type=checkbox]:focus, textarea:focus, select:focus { outline: 0; }
+input[type=button], input[type=reset], input[type=submit] { width: auto !important; }
+input[type=checkbox], input[type=radio] { width: auto; margin: 0; vertical-align: middle; cursor: pointer; }
+input[type=file] { padding: 0; border: 0; }
+.cbi-input-invalid, .cbi-value-error input { color: #f00; border-color: #f00 !important; }
+.cbi-image-button { margin: 10px 8px; vertical-align: middle; }
+.uneditable-input { background: #fafafa; border-color: #f2f2f2; color: #ccc; cursor: not-allowed; }
+.uneditable-input:active, .uneditable-input:focus { border-color: #f2f2f2; }
+.cbi-value-description { display: inline; }
+.cbi-value-description img { vertical-align: sub; }
+ 
+/* Button */ /* 各个按钮圆角颜色及添加阴影 */
+.cbi-button { border-radius: 15px !important; display: inline-block; background: #fff; border: 2px solid #7ADD7A; border-radius: 2px; box-shadow: 0 4px 4px rgba(0, 0, 0, .0); color: #333; line-height: 16px; padding: 6px 12px; cursor: pointer; }
+.cbi-button:active, .cbi-button:focus { border-color: #bbb; }    /* 扫描按钮 */
+
+.cbi-button-up, .cbi-input-up {
+	background-position: center;
+	background-image: url('../resources/cbi/up.gif'), linear-gradient(#3BB8ED, #3BB8ED 50%, #3BB8ED);
+	background-repeat: no-repeat;
+}
+
+.cbi-button-down, .cbi-input-down {
+	background-position: center;
+	background-image: url('../resources/cbi/down.gif'), linear-gradient(#3BB8ED, #3BB8ED 50%, #3BB8ED);
+	background-repeat: no-repeat;
+}
+
+.cbi-button-add, .cbi-input-add { background: #63AFF2; border-color: #63AFF2;border: dashed #778899 1.5px; color: #fff; }  /* 添加按钮 */
+.cbi-button-add:active, .cbi-button-add:focus, .cbi-input-add:active, .cbi-input-add:focus { border-color: #63AFF2; opacity: .8; }
+
+.cbi-button-remove, .cbi-input-remove, .cbi-section-remove input { background: #B873B9; border-color: #B873B9;border: dashed #778899 1.5px; color: #fff; }  /* 删除按钮 */
+.cbi-button-remove:active, .cbi-button-remove:focus, .cbi-input-remove:active, .cbi-input-remove:focus, .cbi-section-remove input:active, .cbi-section-remove input:focus { border-color: #B873B9; opacity: .8; }
+
+.cbi-button-reload, .cbi-input-reload { background: rgb(255,157,89); border-color: rgb(255,157,89); border: dashed #778899 1.5px;color: #fff; }   /* 重启按钮 */
+.cbi-button-reload:active, .cbi-button-reload:focus, .cbi-input-reload:active, .cbi-input-reload:focus { border-color: rgb(255,157,89); opacity: .8; }
+
+.cbi-button-reset, .cbi-input-reset { background: #FF6060; border-color: #FF6060;border: dashed #778899 1.5px; color: #fff; }  /* 复位按钮 */
+.cbi-button-reset:active, .cbi-button-reset:focus, .cbi-input-reset:active, .cbi-input-reset:focus { border-color: #FF6060; opacity: .8; }
+
+.cbi-button-edit, .cbi-input-edit { background: #6B72D8; border-color: #6B72D8;border: dashed #696969 1.5px; color: #fff; }  /* 编辑修改按钮 */
+.cbi-button-edit:active, .cbi-button-edit:focus, .cbi-input-edit:active, .cbi-input-edit:focus { border-color: #6B72D8; opacity: .8; }
+
+.cbi-button-apply, .cbi-input-apply { background: rgb(129,192,128); border-color: rgb(129,192,128); border: dashed #778899 1.5px;color: #fff; }  /* 保存应用按钮 */
+.cbi-button-apply:active, .cbi-button-apply:focus, .cbi-input-apply:active, .cbi-input-apply:focus { border-color: rgb(129,192,128); opacity: .8; }
+
+.cbi-button-save, .cbi-input-save { background: rgb(95,140,255); border-color: rgb(95,140,255);border: dashed #778899 1.5px;color: #fff; }  /* 保存按钮 */
+.cbi-button-save:active, .cbi-button-save:focus, .cbi-input-save:active, .cbi-input-save:focus { border-color: rgb(95,140,255); opacity: .8; }
+
+
+/* Input Error */
+.cbi-section-error { background: #fee; border: 1px solid #f00; padding: 10px; }
+.cbi-section-error ul { padding-left: 20px; }
+.cbi-section-error ul li { color: #f00; list-style: disc; }
+ 
+/* Interface */
+.ifacebox { text-align: center; margin-right: 60px; }
+.ifacebox .ifacebox-head { border-radius: 9px 9px 0 0; }
+.ifacebox .ifacebox-body { border: 1px dashed #7B68EE; border-top: 0; border-radius: 0 0 4px 4px; padding: 2px 10px; }
+
+/* Firewall */
+.zonebadge { display: inline-block; border-radius: 4px; color: #333; white-space: nowrap; padding: 0 8px; cursor: pointer; }
+.zonebadge em, .zonebadge strong { margin: 0 5px; }
+.zonebadge-empty { border: 1px dashed #ddd; color: #ddd; font-style: italic; }
+ 
+/* Footer */  /* 最底栏颜色 */
+footer { border-top: 1px dashed #eee; color: #bbb; font-size: 12px; margin-top: 60px; padding: 8px 0 20px; }
+footer a { color: #bbb; }
+footer a:hover { color: #08c; }
+
+/* diy theme */   /* 在主题目录下放入图片命名为 bg.jpg 这个bootstrap的目录下也就是和cascade.css在一个目录下  记得去除body前面的井号这样才能应用图片 */
+#body {
+	/* added begin */
+	background-image:url(bg.jpg);
+	background-attachment:fixed;
+	background-size: cover;
+	/* added end */
+/*
