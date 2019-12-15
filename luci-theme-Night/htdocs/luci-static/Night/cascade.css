@@ -4,6 +4,7 @@
  * Author URI: 
 ------------------------------------------------------- */
 /* Reset */  /* 页面背景 最上面的字体大小 */
+body,html{height:100%}
 body { background: #FFFFFF; color: #333; font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.8; margin: 0; padding-top: 48px; }  /* 状态和上面的距离 */
 a { color: #08c; text-decoration: none; outline: 0; }
 a:hover { opacity: 1; }
@@ -16,17 +17,96 @@ a:hover { opacity: 1; }
 .inline { display: inline; }
 .hidden { display: none; }
 
-/* 隐藏登录用户栏 */
-#.container form[action$="/cgi-bin/luci"] .cbi-map fieldset fieldset div:first-child { display: none; }
-#.pull-left, .left { float: left; }#ff0000
-#.pull-right, .right { float: right; }
-#.inline { display: inline; }
-#.hidden { display: none; }
+/* login */
+body.node-main-login {
+	background-image:url(bg.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;               
+         -ms-background-size: cover;        /* IE 9 */
+         -moz-background-size: cover;      /* Firefox */
+         -webkit-background-size: cover;  /* Safari and Chrome */
+         -o-background-size: cover;      /* Opera */
+
+
+/* Global values */
+-ms-padding-top: unset;
+-moz-padding-top: unset;
+-webkit-padding-top: unset;
+-o-padding-top: unset;
+}
+body.node-main-login > header {
+    background: none;
+	border-bottom: auto;
+}
+
+.node-main-login > .container > form {
+	width: 20rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    border-radius: .375rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: auto;
+}
+
+.node-main-login > .container > form .errorbox {
+	color: red;
+}
+
+.node-main-login > .container > form > .cbi-map > h2{
+    width: 110px;
+    height: 110px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 4px;
+    display: block;
+    margin: -100px auto 20px auto;
+    padding: 0;
+    text-indent: -500px;
+    overflow: hidden;
+    border-radius: 60px;
+    border: #118af3 2px solid;
+    background-image: url(wifi.png);
+    background-size: cover;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+}
+
+/*  */
+.node-main-login > .container > form .luci_username_div > div, .node-main-login > .container > form .luci_password_div > div{
+	margin-left:auto !important;
+         -ms-margin-left:auto !important;       /* IE 9 */
+         -moz-margin-left:auto !important;      /* Firefox */
+         -webkit-margin-left:auto !important;  /* Safari and Chrome */
+         -o-margin-left:auto !important;      /* Opera */
+}
+
+.node-main-login > .container > form input[name='luci_username'], .node-main-login > .container > form input[name='luci_password'] {
+	background:unset;
+	color: #32CD32;
+}
+
+.node-main-login > .container > form > .cbi-map > fieldset.cbi-section {
+	display: unset;
+}
+
+.node-main-login > .container > footer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 100%;
+	margin-top: 60px;
+	display: none;
+}
 
 /* Header */  /* 顶栏横条 */
 header { position: fixed; top: 0; left: 0; right: 0; background: #454C59; box-shadow: 0 1px 1px rgba(0,0,0,.1); z-index: 100; }
-.brand { float: left; color: #ffffff; font-size: 25px; font-weight: 1200; line-height: 48px; margin-right: 25px; position: absolute; left: 0; margin-left: 15px; }
+.brand { float: left; color: #ffffff; font-size: 25px; font-weight: 1200; line-height: 48px; margin-right: 25px; position:absolute;width:200px;left:50%;margin-left:-780px; }
 header:before{background:#000 linear-gradient(to left,#00FF00,#FF8C00,#FF7F00,#FFFF00,#00FF00,#00FF00,#FFFF00,#FF7F00,#FF8C00,#00FF00);content:"";height:2px;position:absolute;top:0;width:100%;min-width:5in}   /* 最上面彩虹 */
+.brand:hover { opacity: 1; }
 .nav li { float: left; }
 .nav a { display: block; color: #ffffff; line-height: 48px; padding: 0 19px;}   /* 顶栏中字体颜色 */
 
@@ -114,11 +194,9 @@ table td:first-child { color: #333; }
 #cpu_free>div, #memtotal>div, #memfree>div, #memcache>div, #membuff>div, #conns>div, #swaptotal>div, #swapfree>div { border: 1.4px dashed #aaa !important; border-radius: 3px; width: 220px !important; }
 #cpu_free>div>div, #memtotal>div>div, #memfree>div>div, #memcache>div>div, #membuff>div>div, #conns>div>div, #swaptotal>div>div, #swapfree>div>div { background: #85d9ff !important; height: 19px !important; border-radius: 2px; }
 
-/* Form */  /* 各个选项窗口圆角参数 */
-input, textarea, select { display: inline-block; border: 1px dashed #ddd; border-radius: 13px; box-sizing: border-box; color: #666; font: inherit; line-height: 16px; }
-input, select { width: 200px; }
-input, textarea { padding: 6px; }
-select { height: 30px; padding: 2px; }
+/* Form */  /* 各个选项窗口圆角参数  solid实线 dashed虚线 */
+input,select,textarea{display:inline-block;box-sizing:border-box;padding:6px;width:190px;border:1px dashed #5F8CFF;border-radius:15px;color:#666;font:inherit;line-height:16px;}   /* 选项窗口颜色 */
+.table.cbi-section-table input,.table.cbi-section-table select,.table.cbi-section-table textarea,table.cbi-section-table input,table.cbi-section-table select,table.cbi-section-table textarea{width:auto;}
 #cbi-firewall-redirect input { width: 90px; }
 #cbi-network-switch_vlan select, #cbi-firewall-zone select, #cbi-firewall-redirect select { width: auto; }
 input:active, input:focus { outline: 0; border-color: #08c; }
@@ -127,6 +205,7 @@ input[type=button], input[type=reset], input[type=submit] { width: auto !importa
 input[type=checkbox], input[type=radio] { width: auto; margin: 0; vertical-align: middle; cursor: pointer; }
 input[type=file] { padding: 0; border: 0; }
 .cbi-input-invalid, .cbi-value-error input { color: #f00; border-color: #f00 !important; }
+.cbi-input-invalid,.cbi-value-error input{border-color:red!important;color:red;}
 .cbi-image-button { margin: 10px 8px; vertical-align: middle; }
 .uneditable-input { background: #fafafa; border-color: #f2f2f2; color: #ccc; cursor: not-allowed; }
 .uneditable-input:active, .uneditable-input:focus { border-color: #f2f2f2; }
@@ -199,3 +278,5 @@ footer a:hover { color: #08c; }
 	background-size: cover;
 	/* added end */
 /*
+
+
