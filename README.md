@@ -5,7 +5,7 @@ luci-theme-Night主题
 直接下载主题源码放到package目录下即可 然后make menuconfig就能luci->themes查看到
 
 
-主题已在CC和LEDE下测试没问题其他未知
+主题已做全兼容从Openwrt CC到19.07都可用 如不可用还是有问题自行吧CSS替换到你的默认主题的luci-theme-bootstrap里面去
 ---
 
 软件截图
