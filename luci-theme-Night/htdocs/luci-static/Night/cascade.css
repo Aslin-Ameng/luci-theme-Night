@@ -11,7 +11,7 @@ a:hover{opacity:1}
 .cbi-map-descr,.cbi-section-descr,h1,h2,h3,h4,h5,h6,p{color:#FF6060;margin-top:0;margin-bottom:10px}  /* 系统下面显示的配置路由器基础信息文字颜色 */
 ol,ul{margin:0;padding:0;list-style:none}
 .tr,tr{display:table-row}
-legend{color:#726bda;font-size:14px;font-weight:700;padding:0 0 3px} /* 系统内存等字体大小 */
+legend{color:#48D1CC;font-size:18px;font-weight:600;padding:0 0 1px} /* 系统内存等字体大小及颜色 */
 .left{text-align:left!important}
 .right{text-align:right!important}
 .center{text-align:center!important}
@@ -170,21 +170,6 @@ h2+.cbi-map-descr { margin-top: -10px; }
 
 /* Fieldset */   /* 主页系统内存网络等字体颜色和错位问题#85d9ff */
 fieldset{border:0;margin:10px 0;padding:0}
-fieldset legend {
-	margin: 5px 0;
-	padding: 3px 20px;
-	border: 1.8px dashed #1e7ace;
-	border-radius: 20px;
-	background: #fff;
-	color: #1e7ace;
-	font-weight: 900;
-	transform:rotate(-3.8deg);
-     -khtml-transform:rotate(-3.8deg);/* Konqueror*/
-     -ms-transform:rotate(-3.8deg); /* IE 9 */
-    -moz-transform:rotate(-3.8deg); /* Firefox */
- -webkit-transform:rotate(-3.8deg); /* Safari and Chrome */
-      -o-transform:rotate(-3.8deg); /* Opera */
-}                                              /* 修改系统天气内存字体角度添加阴影颜色 */
 fieldset fieldset{margin:0}
 .cbi-value{margin-bottom:10px;zoom:1;clear:both}
 .table .cbi-value-field,table .cbi-value-field{display:table-cell}
@@ -345,9 +330,9 @@ input[type=file]{padding:0;border:0}
 .zone-forwards>*{flex:1 1 40%;padding:1px}
 
 /* Footer */  /* 最底栏颜色 */
-footer{border-top:1.5px dashed #85d9ff;color:#111;font-size: 12px;margin-top:10px;padding:10px 0 ;text-align:center}
+footer{border-top:1.5px dashed #726bda;color:#FF6060;font-size: 12px;margin-top:10px;padding:10px 0 ;text-align:center}
 footer a{color:#726bda}
-footer a:hover{color:#fff}
+footer a:hover{color:#B873B9}
 
 /* diy */
 
@@ -616,7 +601,6 @@ body.modal-overlay-active #modal_overlay>.modal {
 
 .btn.primary,
 .cbi-button-action.important,
-.cbi-page-actions .cbi-button-apply,
 .cbi-section-actions .cbi-button-edit {
     color: #fff;
     background: #726bda;
